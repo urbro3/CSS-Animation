@@ -27,12 +27,25 @@ div {
   font-size: 2rem;
 }
 
-/* scale transforms */
+/* translate transforms*/
+/* General Form: translate3d(tx,ty,tz) */
+/* variable can be a length or a percentage */
+/* emmet: trf:t, trf:t3, trf:tx, trf:ty, trf:tz */
 div {
-  /* transform: scale(2); */
-  transform: scale(1.5, 1);
-  /* transform: scaleX(2); */
-  /* transform: scaleY(2); */
-  /* transform: scaleZ(2); */
-  /* transform: scale3d(1.5,.8,2); */
+  /* transform: translate(30px); */
+  /* transform: translate(30px, 100px); */
+  /* transform: translate3d(20px, 20px, 20px); */
+  /* transform: translateX(20px); */
+  /* transform: translateY(100%); */
+  /* transform: translateZ(20px); */
+  position: relative;
+}
+
+div::after {
+  content: 'After';
+  background-color: red;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%);
 }
