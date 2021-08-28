@@ -27,25 +27,12 @@ div {
   font-size: 2rem;
 }
 
-/* translate transforms*/
-/* General Form: translate3d(tx,ty,tz) */
-/* variable can be a length or a percentage */
-/* emmet: trf:t, trf:t3, trf:tx, trf:ty, trf:tz */
+/* skew transforms*/
+/* General Form: skew(ax, ay) */
+/* emmet: trf:skx, trf:sky */
 div {
-  /* transform: translate(30px); */
-  /* transform: translate(30px, 100px); */
-  /* transform: translate3d(20px, 20px, 20px); */
-  /* transform: translateX(20px); */
-  /* transform: translateY(100%); */
-  /* transform: translateZ(20px); */
-  position: relative;
-}
-
-div::after {
-  content: 'After';
-  background-color: red;
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%);
+  /* transform: skew(30deg); */
+  transform: skew(30deg, -45deg);
+  /* transform: skewX(45deg); */
+  /* transform: skewY(45deg); */
 }
